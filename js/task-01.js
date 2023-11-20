@@ -1,16 +1,16 @@
-const categoriesList = document.querySelector("#categories");
-const categoryItems = categoriesList.querySelectorAll("li.item"); 
+const categoryList = document.querySelector("#categories"); //szukamy daną kategorię
+const categoryItems = categoryList.querySelectorAll("li.item"); // szukamy li z klasą item
+
 for (const item of categoryItems) {
-  const tittle = item.querySelector("h2").textContent; 
-  const categoryElements = item.querySelectorAll("ul li");  
-  const numberOfElements = categoryElements.length; 
+  
+  const tittle = item.querySelector("h2").textContent; //Użycie queryselector do wyciągnięcia h2 
+  
+
+  const categoryElements = item.querySelectorAll("ul li");   // Wyciągnięcie wszystkich elementy <li> 
+  
+  const numberOfElements = categoryElements.length; // Oblicz liczbę elementów w kategorii
+  
+  
   console.log("Category " + tittle);
- console.log("Number of categories: ", numberOfElements); 
+ console.log("Number of categories: ", numberOfElements); //Wynik
 }
-console.log(`Number of categories: ${categoriesList.length}`);
-categoriesList.forEach(category => {
-    const title = category.querySelector('h2').textContent;
-    const elements = category.querySelectorAll('li').length;
-    console.log(`Category: ${title}`);
-    console.log(`Elements: ${elements}`);
-});
